@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      grid-template-rows: auto;
+      gap: 10px;
+      background-color: #f1b7db;
+      padding: 10px;
+    }
+
+    .item {
+      background-color: #f583bc;
+      padding: 20px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    
+    .relative-item {
+      position: relative;
+      top: 10px;
+      left: 10px;
+      background-color: #8d0c57;
+    }
+
+    .absolute-container {
+      position: relative;
+    }
+
+    .absolute-item {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #080707;
+      padding: 10px;
+    }
+
+   
+    .centered-grid-item {
+      display: flex; 
+      align-items: center;
+      justify-content: center;
+      background-color: #9c27b0;
+    }
+    </style>
+</head>
+<body>
+     <h1>Trabajo de Investigación y Práctica: Grid y Posicionamiento</h1>
+
+  <p><strong>Objetivo:</strong> Demostrar el uso de <code>display: grid</code> y cómo se pueden integrar propiedades de Flexbox y posicionamiento (relativo, absoluto) dentro de una estructura grid.</p>
+
+  <h2>1. Contenedor Grid básico (3 columnas)</h2>
+  <div class="grid-container">
+    <div class="item">Elemento 1</div>
+    <div class="item">Elemento 2</div>
+    <div class="item">Elemento 3</div>
+    <div class="item">Elemento 4</div>
+    <div class="item">Elemento 5</div>
+    <div class="item">Elemento 6</div>
+  </div>
+
+  <h2>2. Usando posicionamiento <code>relative</code> en un ítem grid</h2>
+  <div class="grid-container">
+    <div class="item">Normal</div>
+    <div class="item relative-item">Relativo</div>
+    <div class="item">Normal</div>
+  </div>
+
+  <h2>3. Usando <code>position: absolute</code> dentro de un ítem grid</h2>
+  <div class="grid-container">
+    <div class="absolute-container item">
+      Contenedor relativo
+      <div class="absolute-item">Absoluto</div>
+    </div>
+    <div class="item">Elemento</div>
+    <div class="item">Elemento</div>
+  </div>
+
+  <h2>4. Combinando Flex y Grid</h2>
+  <div class="grid-container">
+    <div class="centered-grid-item item">Centrado con Flex</div>
+    <div class="item">Normal</div>
+    <div class="item">Normal</div>
+  </div>
+
+  <h2>5. Propiedades compartidas entre GRID y FLEX</h2>
+  <ul>
+    <li><code>justify-content</code>: controla alineación horizontal</li>
+    <li><code>align-items</code>: controla alineación vertical</li>
+    <li><code>gap</code>: espacio entre filas/columnas</li>
+    <li><code>order</code>: cambia el orden de visualización</li>
+  </ul>
+
+    
+</body>
+</html>
